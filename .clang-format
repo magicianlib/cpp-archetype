@@ -1,0 +1,66 @@
+---
+# 使用 Google 风格
+BasedOnStyle: Google
+# 不使用 Tab
+UseTab: Never
+# UseTab 为 Never 时不生效
+TabWidth: 0
+# 缩进空格数
+IndentWidth: 2
+# 每行最大字符数
+ColumnLimit: 120
+
+---
+# 定义 C++ 代码风格
+Language: Cpp
+# 函数变量参数是否需要对其
+AlignAfterOpenBracket: false
+# 语句是否允许单行
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+# 构造函数参数堆叠方式
+PackConstructorInitializers: CurrentLine
+# 模板声明后添加空格
+SpaceAfterTemplateKeyword: false
+# 修饰符对其方式:
+# 左侧: `const int a;`
+# 右侧: `int const a;`
+QualifierAlignment: Left
+# 指针和引用操作符对其方式:
+# `int* a; int& b; *a = b;`
+PointerAlignment: Left
+ReferenceAlignment: Left
+SpaceAroundPointerQualifiers: Default
+# 是否根据上下文自动推断指针对其方式(使用上面自定义对其方式)
+DerivePointerAlignment: false
+# 命名空间缩进方式(不缩进)
+NamespaceIndentation: None
+# 访问修饰符缩进进(缩进1个单位)
+AccessModifierOffset: -1
+# 命名空间紧凑布局
+CompactNamespaces: false
+# 命名空间尾部自动插入结束字符
+FixNamespaceComments: false
+# 定义之间增加空行
+SeparateDefinitionBlocks: Always
+# 访问修饰符(public/private/protected)之前是否插入空行
+EmptyLineBeforeAccessModifier: Always
+# 头文件排序规则
+IncludeCategories:
+  - Regex: '^".*\.(h|hpp)"'
+    Priority: 1
+    # This category matches project headers, such as "module.h"
+
+  - Regex: '^<.*\.(h|hpp)>'
+    Priority: 2
+    # This category matches system or third-party headers, such as <sys/netport.h>
+
+  - Regex: '^<[^.>]+>$'
+    Priority: 3
+    # This category matches standard library, such as <iostream>
+
