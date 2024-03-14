@@ -50,17 +50,3 @@ FixNamespaceComments: false
 SeparateDefinitionBlocks: Always
 # 访问修饰符(public/private/protected)之前是否插入空行
 EmptyLineBeforeAccessModifier: Always
-# 头文件排序规则
-IncludeCategories:
-  - Regex: '^".*\.(h|hpp)"'
-    Priority: 1
-    # This category matches project headers, such as "module.h"
-
-  - Regex: '^<.*\.(h|hpp)>'
-    Priority: 2
-    # This category matches system or third-party headers, such as <sys/netport.h>
-
-  - Regex: '^<[^.>]+>$'
-    Priority: 3
-    # This category matches standard library, such as <iostream>
-
