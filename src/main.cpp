@@ -1,10 +1,8 @@
 // clang-format off
 #include "work.h"
-#include "sub/sub.h"
+#include "my_singleton.h"
 
 #include "3rd/constant.h"
-
-#include <sys/netport.h>
 
 #include <iostream>
 
@@ -12,6 +10,9 @@
 
 int main() {
   Work w{};
+
+  MySingletonClass::instance().doSomething();
+  MySingletonClass::instance().doSomething();
 
   std::cout << "Hello, World!" << constant::gravity << std::endl;
   return 0;

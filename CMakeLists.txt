@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 20)
 # 设置源文件
 set(SOURCES
         src/main.cpp
-        src/work.cpp)
+        src/work.cpp
+        src/my_singleton.cpp)
 
 # 使用 glob 表达式
 # 递归筛选 include 目录下的 .h/.hpp 文件
